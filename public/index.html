@@ -11,34 +11,13 @@
   <div class="container">
     <h2 class="todo__caption">Список задач</h2>
     <div>
-      <input id="shooter" class="form-control" type="text" placeholder="Новая задача">
-      <button id="add-btn" type="button">Добавить</button>
+      <input class="form-control" type="text" placeholder="Новая задача">
       <div class="todo-body">
-        <ul id="todo-list" class="list">
+        <ul class="list">
         </ul>
       </div>
     </div>
   </div>
 </body>
-
-<script>
-
-  let myKnopka = document.getElementById('add-btn');
-  myKnopka.addEventListener('click', addItem);
-
-  function addItem(data) {
-    let input = document.getElementById('shooter');
-    let list = document.getElementById('todo-list');
-
-    if (input.value !== '' && input.value !== null) {
-      let newItem = document.createElement('li');
-      newItem.innerText = input.value;
-      list.appendChild(newItem);
-    }
-
-    input.value = '';
-  }
-
-</script>
 
 </html>
